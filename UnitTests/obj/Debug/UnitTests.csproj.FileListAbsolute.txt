@@ -1,0 +1,7 @@
+c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\bin\Debug\UnitTests.dll
+c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\bin\Debug\UnitTests.pdb
+c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\obj\Debug\UnitTests.Properties.Resources.resources
+c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\obj\Debug\UnitTests.csproj.GenerateResource.Cache
+c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\obj\Debug\UnitTests.dll
+c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\obj\Debug\UnitTests.pdb
