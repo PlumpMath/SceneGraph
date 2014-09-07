@@ -4,3 +4,9 @@ c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\SceneGraph
 c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\SceneGraphReader\bin\Debug\SceneGraphReader.pdb
 c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\SceneGraphReader\obj\Debug\SceneGraphReader.exe
 c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\SceneGraphReader\obj\Debug\SceneGraphReader.pdb
+C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\bin\Debug\SceneGraphReader.exe.config
+C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\obj\Debug\SceneGraphReader.exe
+C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\obj\Debug\SceneGraphReader.pdb
+C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\obj\Debug\SceneGraphReader.csprojResolveAssemblyReference.cache
+C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\bin\Debug\SceneGraphReader.exe
+C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\bin\Debug\SceneGraphReader.pdb

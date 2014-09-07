@@ -5,3 +5,12 @@ c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\
 c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\obj\Debug\UnitTests.csproj.GenerateResource.Cache
 c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\obj\Debug\UnitTests.dll
 c:\users\chris\documents\visual studio 2013\Projects\SceneGraphReader\UnitTests\obj\Debug\UnitTests.pdb
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\bin\Debug\UnitTests.dll
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\bin\Debug\SceneGraphReader.exe
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\bin\Debug\SceneGraphReader.pdb
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.Properties.Resources.resources
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.csproj.GenerateResource.Cache
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.dll
+C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.pdb

@@ -31,6 +31,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,7 +53,7 @@
   <ItemGroup>
     <Compile Include="Parser\FileLoader.cs" />
     <Compile Include="Parser\SyntaxAnalyser.cs" />
-    <Compile Include="Parser\SyntaxTree.cs" />
+    <Compile Include="Parser\SyntaxTreeNode.cs" />
     <Compile Include="Scene\Folder.cs" />
     <Compile Include="Scene\ISceneObject.cs" />
     <Compile Include="SceneGraphMain.cs" />
