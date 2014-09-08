@@ -14,3 +14,12 @@ C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.Prop
 C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.csproj.GenerateResource.Cache
 C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.dll
 C:\Users\Christian\Documents\SceneGraphReader\UnitTests\obj\Debug\UnitTests.pdb
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\bin\Debug\UnitTests.dll
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\bin\Debug\SceneGraphReader.exe
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\bin\Debug\SceneGraphReader.pdb
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\obj\Debug\UnitTests.Properties.Resources.resources
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\obj\Debug\UnitTests.csproj.GenerateResource.Cache
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\obj\Debug\UnitTests.dll
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\UnitTests\obj\Debug\UnitTests.pdb

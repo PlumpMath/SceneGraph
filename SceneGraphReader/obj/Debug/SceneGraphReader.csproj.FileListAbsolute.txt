@@ -10,3 +10,9 @@ C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\obj\Debug\SceneGr
 C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\obj\Debug\SceneGraphReader.csprojResolveAssemblyReference.cache
 C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\bin\Debug\SceneGraphReader.exe
 C:\Users\Christian\Documents\SceneGraphReader\SceneGraphReader\bin\Debug\SceneGraphReader.pdb
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\SceneGraphReader\bin\Debug\SceneGraphReader.exe.config
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\SceneGraphReader\obj\Debug\SceneGraphReader.exe
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\SceneGraphReader\obj\Debug\SceneGraphReader.pdb
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\SceneGraphReader\bin\Debug\SceneGraphReader.exe
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\SceneGraphReader\bin\Debug\SceneGraphReader.pdb
+C:\Users\Chris\Source\Repos\SceneGraphReader\SceneGraph\SceneGraphReader\obj\Debug\SceneGraphReader.csprojResolveAssemblyReference.cache

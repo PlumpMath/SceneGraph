@@ -17,7 +17,7 @@ namespace SceneGraphReader.Parser
             SyntaxTreeNode bgNode = CreateDefaultBG();
             SyntaxTreeNode itemNode = CreateDefaultItem();
 
-            SyntaxTreeNode root = new SyntaxTreeNode(bgNode.value + itemNode.value);
+            SyntaxTreeNode root = new SyntaxTreeNode("root");
 
             root.AddChild(bgNode);
             root.AddChild(itemNode);

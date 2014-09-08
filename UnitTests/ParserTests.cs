@@ -38,7 +38,26 @@ namespace UnitTests
         {
             SyntaxTreeNode node = SyntaxTreeNode.CreateDefaultTree();
 
-            Assert.IsTrue(node != null);
+            Assert.IsTrue(node.GetChildren().Count > 0);
         }
+
+        [TestMethod]
+        public void EmptyBGSyntax()
+        {
+            SyntaxTreeNode temp =  testAnalyser.AnalyzeSyntax("==BG==\n");
+
+            foreach (SyntaxTreeNode node in temp.GetChildren())
+            {
+                if (node.value == "==BG==\n")
+                {
+                    Assert.IsTrue(true);
+                    return;
+                }
+            }
+
+
+            Assert.IsTrue(false);
+        }
+
     }
 }
