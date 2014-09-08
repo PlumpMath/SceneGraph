@@ -32,7 +32,7 @@ namespace SceneGraphReader.Parser
             string endExpression = "End=[0-9]+,[0-9]+\n";
             string wallExpression = "Wall\n\\(("+startExpression+endExpression+"\n\\))\n";
             string mapExpression = "Map\n\\((\n("+wallExpression+")*\\))";
-            string bgExpression = "=BG=\n("+mapExpression+")*\n?";
+            string bgExpression = "==BG==\n("+mapExpression+")*\n?";
 
 
             SyntaxTreeNode end = new SyntaxTreeNode(endExpression);
@@ -58,7 +58,7 @@ namespace SceneGraphReader.Parser
             string nameExpression = "Name=\"[A-Z,a-z,0-9]*\"";
             string itemExpression = "Item\n\\((\n"+nameExpression+"\n";
             string itemExpressionFull = itemExpression+"("+posExpression+")\\))|("+itemExpression+")+";
-            string itemHeaderExpression = "=ITEMS=\n("+itemExpressionFull+")*\n?";
+            string itemHeaderExpression = "==ITEMS==\n("+itemExpressionFull+")*\n?";
 
             SyntaxTreeNode name = new SyntaxTreeNode(nameExpression);
 
@@ -83,7 +83,7 @@ namespace SceneGraphReader.Parser
         {
             get
             {
-                return value;
+                return _value;
             }
         }
         

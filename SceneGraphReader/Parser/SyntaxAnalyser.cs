@@ -60,8 +60,7 @@ namespace SceneGraphReader.Parser
         private string MatchExpression(string line, string expression)
         { 
             Match match = Regex.Match(line,expression);
-
-            if (match != null)
+            if (match.Value != "")
             {
                 return match.Value;
             }
