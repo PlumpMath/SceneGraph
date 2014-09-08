@@ -55,9 +55,9 @@ namespace SceneGraphReader.Parser
         private static SyntaxTreeNode CreateDefaultItem()
         {
             string posExpression = "Pos=[0-9]+,[0-9]+\n";
-            string nameExpression = "Name=\"[A-Z,a-z,0-9]*\"";
-            string itemExpression = "Item\n\\((\n"+nameExpression+"\n";
-            string itemExpressionFull = itemExpression+"("+posExpression+")\\))|("+itemExpression+")+";
+            string nameExpression = "Name=\"[A-Za-z0-9]*\"\n";
+            string itemExpression = "Item\n\\(\n"+nameExpression;
+            string itemExpressionFull = itemExpression + "(" + posExpression + ")|(" + itemExpression + ")+\n\\)";
             string itemHeaderExpression = "==ITEMS==\n("+itemExpressionFull+")*\n?";
 
             SyntaxTreeNode name = new SyntaxTreeNode(nameExpression);

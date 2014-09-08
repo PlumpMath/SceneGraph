@@ -12,18 +12,7 @@ namespace SceneGraphReader
     {
         static void Main(string[] args)
         {
-            SyntaxAnalyser testAnalyser = new SyntaxAnalyser();
-
-            SyntaxTreeNode temp = testAnalyser.AnalyzeSyntax("==BG==\n");
-
-            foreach (SyntaxTreeNode node in temp.GetChildren())
-            {
-                if (node.value == "==BG==\n")
-                {
-                    return;
-                }
-            }
-
+           
         }
     }
 }

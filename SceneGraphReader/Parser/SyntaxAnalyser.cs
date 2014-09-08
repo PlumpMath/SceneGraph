@@ -23,7 +23,7 @@ namespace SceneGraphReader.Parser
 
             foreach (SyntaxTreeNode node in syntaxTree.GetChildren())
             {
-                SyntaxTreeNode temp = TraverseTree(file, node);
+                SyntaxTreeNo; de temp = TraverseTree(file, node);
                 if (temp != null)
                 {
                     root.AddChild(temp);

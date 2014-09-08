@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SceneGraphReader.Scene;
 using SceneGraphReader.Parser;
@@ -46,17 +47,43 @@ namespace UnitTests
         {
             SyntaxTreeNode temp =  testAnalyser.AnalyzeSyntax("==BG==\n");
 
-            foreach (SyntaxTreeNode node in temp.GetChildren())
-            {
-                if (node.value == "==BG==\n")
-                {
-                    Assert.IsTrue(true);
-                    return;
-                }
-            }
+            List<SyntaxTreeNode> tree = temp.GetChildren();
 
-            Assert.IsTrue(false);
+            if (tree.Count > 0)
+            {
+                Assert.AreEqual(tree[0].value, "==BG==\n");
+            }
+            else
+            {
+                Assert.IsTrue(false);
+            }
         }
+
+        [TestMethod]
+        public void EmptyItemSyntax()
+        {
+            SyntaxTreeNode temp = testAnalyser.AnalyzeSyntax("==BG==\n==ITEM==\n");
+
+            List<SyntaxTreeNode> tree = temp.GetChildren();
+
+            if (tree.Count > 0)
+            {
+                Assert.AreEqual(tree[1].value, "==ITEM==\n");
+            }
+            else
+            {
+                Assert.IsTrue(false);
+            }
+        }
+
+        [TestMethod]
+        public void MapSyntax()
+        { 
+        
+        
+        }
+
+
 
     }
 }
