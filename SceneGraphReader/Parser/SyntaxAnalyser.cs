@@ -19,16 +19,7 @@ namespace SceneGraphReader.Parser
 
         public SyntaxTreeNode AnalyzeSyntax(string file)
         {
-            SyntaxTreeNode root = new SyntaxTreeNode("root");
-
-            foreach (SyntaxTreeNode node in syntaxTree.GetChildren())
-            {
-                SyntaxTreeNo; de temp = TraverseTree(file, node);
-                if (temp != null)
-                {
-                    root.AddChild(temp);
-                }
-            }
+            SyntaxTreeNode root = TraverseTree(file,syntaxTree);
 
             return root;
         }
@@ -48,6 +39,8 @@ namespace SceneGraphReader.Parser
                     {
                         retNode.AddChild(temp);
                     }
+
+                    line = Regex.Replace(line, matchedExpression, "");
                 }
 
                 return retNode;

@@ -17,7 +17,7 @@ namespace SceneGraphReader.Parser
             SyntaxTreeNode bgNode = CreateDefaultBG();
             SyntaxTreeNode itemNode = CreateDefaultItem();
 
-            SyntaxTreeNode root = new SyntaxTreeNode("root");
+            SyntaxTreeNode root = new SyntaxTreeNode(bgNode.value + itemNode.value);
 
             root.AddChild(bgNode);
             root.AddChild(itemNode);
@@ -30,8 +30,8 @@ namespace SceneGraphReader.Parser
 
             string startExpression = "Start=[0-9]+,[0-9]+\n";
             string endExpression = "End=[0-9]+,[0-9]+\n";
-            string wallExpression = "Wall\n\\(("+startExpression+endExpression+"\n\\))\n";
-            string mapExpression = "Map\n\\((\n("+wallExpression+")*\\))";
+            string wallExpression = "Wall\n\\(\n"+startExpression+endExpression+"\\)\n";
+            string mapExpression = "Map\n\\(\n("+wallExpression+")*\\)\n";
             string bgExpression = "==BG==\n("+mapExpression+")*\n?";
 
 
@@ -55,7 +55,7 @@ namespace SceneGraphReader.Parser
         private static SyntaxTreeNode CreateDefaultItem()
         {
             string posExpression = "Pos=[0-9]+,[0-9]+\n";
-            string nameExpression = "Name=\"[A-Za-z0-9]*\"\n";
+            string nameExpression = "Name=\"[A-Za-z0-9]*\n";
             string itemExpression = "Item\n\\(\n"+nameExpression;
             string itemExpressionFull = itemExpression + "(" + posExpression + ")|(" + itemExpression + ")+\n\\)";
             string itemHeaderExpression = "==ITEMS==\n("+itemExpressionFull+")*\n?";
