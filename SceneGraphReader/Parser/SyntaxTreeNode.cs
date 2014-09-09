@@ -57,7 +57,8 @@ namespace SceneGraphReader.Parser
             string posExpression = "Pos=[0-9]+,[0-9]+\n";
             string nameExpression = "Name=\"[A-Za-z]*[0-9]*\"\n";
             string itemExpression = "Item\n\\(\n"+nameExpression+posExpression+"\\)\n?";
-            string itemExpressionFull = "Item\n\\(\n"+nameExpression + "(" + posExpression + ")|(Item\n\\((.|\n)*\n\\))\\)\n?";
+            string fillInExpression = "\n";
+            string itemExpressionFull = "Item\n\\(\n" + nameExpression + "(" + posExpression + "|blank)\\)\n?";
             string itemHeaderExpression = "==ITEMS==\n("+itemExpressionFull+")*\n?";
 
             SyntaxTreeNode name = new SyntaxTreeNode(nameExpression);
@@ -69,8 +70,9 @@ namespace SceneGraphReader.Parser
             item.AddChild(position);
 
             SyntaxTreeNode itemFull = new SyntaxTreeNode(itemExpressionFull);
-            itemFull.AddChild(position);
+            itemFull.AddChild(itemFull);
             itemFull.AddChild(item);
+            
 
             SyntaxTreeNode head = new SyntaxTreeNode(itemHeaderExpression);
             head.AddChild(itemFull);
