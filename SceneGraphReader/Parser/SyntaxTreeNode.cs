@@ -38,6 +38,7 @@ namespace SceneGraphReader.Parser
         private static SyntaxTreeNode CreateDefaultItem()
         {
             
+
         }
 
 #endregion
