@@ -55,24 +55,25 @@ namespace SceneGraphReader.Parser
         private static SyntaxTreeNode CreateDefaultItem()
         {
             string posExpression = "Pos=[0-9]+,[0-9]+\n";
-            string nameExpression = "Name=\"[A-Za-z0-9]*\n";
-            string itemExpression = "Item\n\\(\n"+nameExpression;
-            string itemExpressionFull = itemExpression + "(" + posExpression + ")|(" + itemExpression + ")+\n\\)";
+            string nameExpression = "Name=\"[A-Za-z]*[0-9]*\"\n";
+            string itemExpression = "Item\n\\(\n"+nameExpression+posExpression+"\\)\n?";
+            string itemExpressionFull = "Item\n\\(\n"+nameExpression + "(" + posExpression + ")|(Item\n\\((.|\n)*\n\\))\\)\n?";
             string itemHeaderExpression = "==ITEMS==\n("+itemExpressionFull+")*\n?";
 
             SyntaxTreeNode name = new SyntaxTreeNode(nameExpression);
 
             SyntaxTreeNode position = new SyntaxTreeNode(posExpression);
            
-            SyntaxTreeNode childItem = new SyntaxTreeNode(itemExpression);
-
-            SyntaxTreeNode item = new SyntaxTreeNode(itemExpressionFull);
+            SyntaxTreeNode item = new SyntaxTreeNode(itemExpression);
             item.AddChild(name);
-            item.AddChild(childItem);
             item.AddChild(position);
 
+            SyntaxTreeNode itemFull = new SyntaxTreeNode(itemExpressionFull);
+            itemFull.AddChild(position);
+            itemFull.AddChild(item);
+
             SyntaxTreeNode head = new SyntaxTreeNode(itemHeaderExpression);
-            head.AddChild(item);
+            head.AddChild(itemFull);
 
             return head;
         }

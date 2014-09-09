@@ -43,44 +43,47 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void EmptyBGSyntax()
-        {
-            SyntaxTreeNode temp =  testAnalyser.AnalyzeSyntax("==BG==\n");
-
-            List<SyntaxTreeNode> tree = temp.GetChildren();
-
-            if (tree.Count > 0)
-            {
-                Assert.AreEqual(tree[0].value, "==BG==\n");
-            }
-            else
-            {
-                Assert.IsTrue(false);
-            }
-        }
-
-        [TestMethod]
         public void EmptyItemSyntax()
         {
-            SyntaxTreeNode temp = testAnalyser.AnalyzeSyntax("==BG==\n==ITEM==\n");
+            SyntaxTreeNode temp = testAnalyser.AnalyzeSyntax("==BG==\n==ITEMS==\n");
 
-            List<SyntaxTreeNode> tree = temp.GetChildren();
-
-            if (tree.Count > 0)
+            if (temp != null)
             {
-                Assert.AreEqual(tree[1].value, "==ITEM==\n");
+               Assert.AreEqual(temp.GetChildren()[1].value, "==ITEMS==\n");
+               return;
             }
-            else
-            {
-                Assert.IsTrue(false);
-            }
+            
+            Assert.IsTrue(false);
         }
 
         [TestMethod]
         public void MapSyntax()
-        { 
-        
-        
+        {
+            SyntaxTreeNode temp = testAnalyser.AnalyzeSyntax("==BG==\nMap\n(\n)\n==ITEMS==\n");
+
+            if (temp != null)
+            {
+               Assert.AreEqual(temp.GetChildren()[0].GetChildren()[0].value, "Map\n(\n)\n");
+                return;
+            }
+
+            Assert.IsTrue(false);
+        }
+
+        [TestMethod]
+        public void ItemSyntax()
+        {
+            SyntaxTreeNode temp = testAnalyser.AnalyzeSyntax("==BG==\nMap\n(\n)\n==ITEMS==\nItem\n(\nName=\"Blah\"\nPos=45,32\n)\n");
+
+            if (temp != null)
+            {
+                Assert.AreEqual(temp.GetChildren()[1].GetChildren()[0].value, "Item\n(\nName=\"Blah\"\nPos=45,32\n)\n");
+                Assert.AreEqual(temp.GetChildren()[1].GetChildren()[0].GetChildren()[0].value, "Name=\"Blah\"\n");
+                Assert.AreEqual(temp.GetChildren()[1].GetChildren()[0].GetChildren()[1].value, "Pos=45,32\n");
+                return;
+            }
+
+            Assert.IsTrue(false);
         }
 
 
