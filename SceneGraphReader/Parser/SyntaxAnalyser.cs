@@ -40,7 +40,7 @@ namespace SceneGraphReader.Parser
                         retNode.AddChild(temp);
                     }
 
-                    matchedExpression = Regex.Replace(matchedExpression, node.value, "");
+                    line = Regex.Replace(line, matchedExpression, "");
                 }
 
                 return retNode;
