@@ -28,54 +28,16 @@ namespace SceneGraphReader.Parser
         private static SyntaxTreeNode CreateDefaultBG()
         {
 
-            string startExpression = "Start=[0-9]+,[0-9]+\n";
-            string endExpression = "End=[0-9]+,[0-9]+\n";
-            string wallExpression = "Wall\n\\(\n"+startExpression+endExpression+"\\)\n";
-            string mapExpression = "Map\n\\(\n("+wallExpression+")*\\)\n";
-            string bgExpression = "==BG==\n("+mapExpression+")*\n?";
-
-
-            SyntaxTreeNode end = new SyntaxTreeNode(endExpression);
-
-            SyntaxTreeNode start = new SyntaxTreeNode(startExpression);
-
-            SyntaxTreeNode wall = new SyntaxTreeNode(wallExpression);
-            wall.AddChild(start);
-            wall.AddChild(end);
-
-            SyntaxTreeNode map = new SyntaxTreeNode(mapExpression);
-            map.AddChild(wall);
-
-            SyntaxTreeNode head = new SyntaxTreeNode(bgExpression);
-            head.AddChild(map);
-
-            return head;
+            SyntaxTreeNode openWall = new SyntaxTreeNode("(");
+            SyntaxTreeNode wall = new SyntaxTreeNode("Wall");
+            SyntaxTreeNode openMap = new SyntaxTreeNode("(");
+            SyntaxTreeNode map = new SyntaxTreeNode("Map");
+            SyntaxTreeNode head = new SyntaxTreeNode("==BG==");
         }
 
         private static SyntaxTreeNode CreateDefaultItem()
         {
-            string posExpression = "Pos=[0-9]+,[0-9]+\n";
-            string nameExpression = "Name=\"[A-Za-z]*[0-9]*\"\n";
-            string itemExpression = "Item\n\\(\n"+nameExpression+posExpression+"\\)\n?";
-            string itemExpressionFull = "Item\n\\(\n"+nameExpression + "(" + posExpression + ")|(Item\n\\((.|\n)*\n\\))\\)\n?";
-            string itemHeaderExpression = "==ITEMS==\n("+itemExpressionFull+")*\n?";
-
-            SyntaxTreeNode name = new SyntaxTreeNode(nameExpression);
-
-            SyntaxTreeNode position = new SyntaxTreeNode(posExpression);
-           
-            SyntaxTreeNode item = new SyntaxTreeNode(itemExpression);
-            item.AddChild(name);
-            item.AddChild(position);
-
-            SyntaxTreeNode itemFull = new SyntaxTreeNode(itemExpressionFull);
-            itemFull.AddChild(position);
-            itemFull.AddChild(item);
-
-            SyntaxTreeNode head = new SyntaxTreeNode(itemHeaderExpression);
-            head.AddChild(itemFull);
-
-            return head;
+            
         }
 
 #endregion
