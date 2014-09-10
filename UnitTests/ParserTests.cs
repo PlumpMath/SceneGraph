@@ -73,7 +73,7 @@ namespace UnitTests
         [TestMethod]
         public void ItemSyntax()
         {
-            SyntaxTreeNode temp = testAnalyser.AnalyzeSyntax("==BG==\nMap\n(\n)\n==ITEMS==\nItem\n(\nName=\"Blah\"\nPos=45,32\n)\n");
+            SyntaxTreeNode temp = testAnalyser.AnalyzeSyntax("==BG==\nMap\n(\n)\n==ITEMS==\nItem\n(\nName=\"Blah\"\nItem\n(\nName=\"Blah2\"\nItem\n(\nName=\"Blah3\"\nPos=45,32\n)\n)\n)\nItem\n(\nName=\"Blah4\"\nPos=4,5\n)\n");
 
             if (temp != null)
             {

@@ -34,13 +34,14 @@ namespace SceneGraphReader.Parser
 
                 foreach (SyntaxTreeNode node in syntaxNode.GetChildren())
                 {
-                    SyntaxTreeNode temp = TraverseTree(matchedExpression, node);
+                    string peek = PeekNextExpression(matchedExpression, node);
+                   SyntaxTreeNode temp = TraverseTree(peek, node);
                     if (temp != null)
                     {
                         retNode.AddChild(temp);
                     }
 
-                    line = Regex.Replace(line, matchedExpression, "");
+                    matchedExpression = Regex.Replace(line, matchedExpression, "");
                 }
 
                 return retNode;
@@ -59,6 +60,24 @@ namespace SceneGraphReader.Parser
             }
 
             return null;
+        }
+
+        private string PeekNextExpression(string line, SyntaxTreeNode node)
+        {
+            string matchException = MatchExpression(line,node.value);
+
+            if (line == matchException)
+            {
+                MatchCollection matches = Regex.Matches(line, "(.|\n)*" + node.value + "(.|\n)*");
+                if (matches.Count > 1)
+                {
+                    return matches[1].Value;
+                }
+                else
+                    return "";
+            }
+
+            return line;
         }
 
     }
