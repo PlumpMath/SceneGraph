@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SceneGraphReader.Parser
+namespace SceneGraphReader.Scene
 {
-    class FileLoader
+    class Item : SceneObject
     {
+        
     }
 }
